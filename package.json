@@ -14,13 +14,11 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "tailwindcss": "^4.1.8",
-    "typescript": "^5.8.3",
-    "wrangler": "^4.95.0"
+    "typescript": "^5.8.3"
   }
 }
