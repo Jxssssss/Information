@@ -28,7 +28,7 @@ export function SettingsPanel({ open, onClose, onSaved }: SettingsPanelProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-4 sm:items-center"
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-[#3d3226]/50 p-4 sm:items-center"
       onClick={onClose} role="presentation">
       <div className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-xl"
         onClick={(e) => e.stopPropagation()} role="dialog" aria-labelledby="settings-title">
@@ -53,7 +53,7 @@ export function SettingsPanel({ open, onClose, onSaved }: SettingsPanelProps) {
         </section>
 
         <button type="button" onClick={handleSave}
-          className="w-full rounded-lg bg-[var(--accent)] py-2.5 text-sm font-medium text-white hover:opacity-90">
+          className="w-full rounded-lg bg-[var(--accent)] py-2.5 text-sm font-medium text-[var(--accent-text)] hover:opacity-90">
           {saved ? "已保存" : "保存设置"}
         </button>
       </div>

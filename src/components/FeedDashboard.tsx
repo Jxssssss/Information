@@ -125,7 +125,7 @@ export function FeedDashboard() {
               <span className="ml-2">· 自动拉取已关闭</span>
             )}
             {data.errors.length > 0 && (
-              <span className="ml-2 text-amber-400">
+              <span className="ml-2 text-amber-600">
                 · {data.errors.length} 个 UP 主拉取失败
               </span>
             )}
@@ -158,7 +158,7 @@ export function FeedDashboard() {
             type="button"
             onClick={() => load(true)}
             disabled={loading}
-            className="rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
+            className="rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-medium text-[var(--accent-text)] hover:opacity-90 disabled:opacity-50"
           >
             {loading ? "刷新中…" : "刷新"}
           </button>
@@ -172,7 +172,7 @@ export function FeedDashboard() {
           onClick={() => setActiveUid("all")}
           className={`rounded-full px-3.5 py-1.5 text-sm transition-colors ${
             activeUid === "all"
-              ? "bg-[var(--accent)] text-white"
+              ? "bg-[var(--accent)] text-[var(--accent-text)]"
               : "bg-[var(--surface)] text-[var(--muted)] hover:bg-[var(--surface-hover)] hover:text-[var(--text)]"
           }`}
         >
@@ -185,7 +185,7 @@ export function FeedDashboard() {
             onClick={() => setActiveUid(s.uid)}
             className={`rounded-full px-3.5 py-1.5 text-sm transition-colors ${
               activeUid === s.uid
-                ? "bg-[var(--accent)] text-white"
+                ? "bg-[var(--accent)] text-[var(--accent-text)]"
                 : "bg-[var(--surface)] text-[var(--muted)] hover:bg-[var(--surface-hover)] hover:text-[var(--text)]"
             }`}
             title={s.note}
@@ -196,13 +196,13 @@ export function FeedDashboard() {
       </div>
 
       {error && (
-        <div className="mb-6 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+        <div className="mb-6 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-700">
           {error}
         </div>
       )}
 
       {data?.errors && data.errors.length > 0 && (
-        <details className="mb-6 rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 text-sm text-amber-200">
+        <details className="mb-6 rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 text-sm text-amber-800">
           <summary className="cursor-pointer font-medium">
             部分 UP 主未能拉取（{data.errors.length}）
           </summary>
