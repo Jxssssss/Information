@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 /**
  * B站 图片代理 — B站 封面图需要 Referer 头才能加载，此路由做反向代理。
  * 用法：/api/img?url=https://i0.hdslb.com/bfs/archive/xxx.jpg
