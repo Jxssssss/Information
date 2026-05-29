@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Information — RSS 聚合阅读",
-  description: "收集各方网站 RSS 订阅，按分类整理展示",
+  title: "B站 VTuber 动态聚合",
+  description: "订阅你喜欢的 B站虚拟主播，聚合展示最新视频投稿和动态",
 };
 
 export default function RootLayout({
